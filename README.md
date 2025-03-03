@@ -33,7 +33,3 @@ AxiomShift is a Chrome extension that allows you to customize the background col
 - **Secondary Color**: This color will be applied to secondary background elements on Axiom.
   
 These settings are saved locally, so you won't have to re-select them every time.
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
