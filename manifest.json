@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "Change Axiom Background Color",
+    "name": "AxiomShift",
     "version": "1.0",
-    "description": "Changes the axiom default background color",
+    "description": "Change Axiom default background color",
     "permissions": ["storage", "activeTab", "scripting"],
     "host_permissions": [
       "https://axiom.trade/*"
