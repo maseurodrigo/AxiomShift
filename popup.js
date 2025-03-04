@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Load stored colors when popup opens
-    chrome.storage.local.get(['primaryBackgroundColor', 'secondaryBackgroundColor'], function(result) {
-        if (result.primaryBackgroundColor) { document.getElementById('primaryColorPicker').value = result.primaryBackgroundColor; }
-        if (result.secondaryBackgroundColor) { document.getElementById('secondaryColorPicker').value = result.secondaryBackgroundColor; }
+    chrome.storage.local.get(['primaryBackgroundColor', 'secondaryBackgroundColor', 'labelButtonColor'], function(result) {
+        if (result.primaryBackgroundColor) document.getElementById('primaryColorPicker').value = result.primaryBackgroundColor;
+        if (result.secondaryBackgroundColor) document.getElementById('secondaryColorPicker').value = result.secondaryBackgroundColor;
+        if (result.labelButtonColor) document.getElementById('labelButtonColorPicker').value = result.labelButtonColor;
     });
 });
 
@@ -24,4 +25,14 @@ document.getElementById('secondaryColorPicker').addEventListener('input', functi
     
     // Send the color to the background service worker
     chrome.runtime.sendMessage({ action: 'changeSecondaryColor', color: color });
+});
+
+document.getElementById('labelButtonColorPicker').addEventListener('input', function(event) {
+    const color = event.target.value;
+
+    // Save the labelButton color to chrome storage
+    chrome.storage.local.set({ labelButtonColor: color });
+
+    // Send the color to the background service worker
+    chrome.runtime.sendMessage({ action: 'changeLabelButtonColor', color: color });
 });
