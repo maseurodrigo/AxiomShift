@@ -10,7 +10,7 @@ AxiomShift is a browser extension that allows you to customize the background co
 
 ## Features
 - Choose primary and secondary background colors using a color picker.
-- The selected colors are saved and applied to every new Axiom tab you visit.
+- The selected colors are saved and applied to every new Axiom page you visit.
 - Supports all Chromium-based browsers, including Google Chrome, Microsoft Edge, Brave, and Opera.
 
 ## Installation
@@ -32,7 +32,7 @@ AxiomShift is a browser extension that allows you to customize the background co
    - Once the extension is installed, you should see the extension icon in the top-right corner of your browser.
    - Click on the icon to open the extension's popup.
    - Select your preferred **primary** and **secondary** background colors using the color pickers.
-   - The selected colors will automatically apply to all the websites you visit.
+   - The selected colors will automatically apply to all the Axiom pages you visit.
 
 ## Usage
 
