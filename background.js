@@ -46,6 +46,7 @@ function applySecondaryBackgroundColor(color) {
                     // Use regex to extract the RGB components from the hex color string
                     var rgbResult = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(color);
                     document.documentElement.style.setProperty('--background-secondary', `${parseInt(rgbResult[1], 16)} ${parseInt(rgbResult[2], 16)} ${parseInt(rgbResult[3], 16)}`);
+                    document.documentElement.style.setProperty('--background-tertiary', `${parseInt(rgbResult[1], 16)} ${parseInt(rgbResult[2], 16)} ${parseInt(rgbResult[3], 16)}`);
                     
                     const secondaryBackground = document.querySelector('.bg-backgroundSecondary');
                     if (secondaryBackground) { secondaryBackground.style.backgroundColor = color; }
@@ -86,9 +87,10 @@ function applyStoredBackgroundColors(tab) {
                 // Use regex to extract the RGB components from the hex color string
                 var rgbSecResult = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(secondary);
                 var rgbLblBtnResult = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(labelButton);
-                
+
                 document.documentElement.style.setProperty('--background', primary);
                 document.documentElement.style.setProperty('--background-secondary', `${parseInt(rgbSecResult[1], 16)} ${parseInt(rgbSecResult[2], 16)} ${parseInt(rgbSecResult[3], 16)}`);
+                document.documentElement.style.setProperty('--background-tertiary', `${parseInt(rgbSecResult[1], 16)} ${parseInt(rgbSecResult[2], 16)} ${parseInt(rgbSecResult[3], 16)}`);
                 document.documentElement.style.setProperty('--primary-color', `${parseInt(rgbLblBtnResult[1], 16)} ${parseInt(rgbLblBtnResult[2], 16)} ${parseInt(rgbLblBtnResult[3], 16)}`);
                 document.documentElement.style.setProperty('--foreground', 'white');
 
